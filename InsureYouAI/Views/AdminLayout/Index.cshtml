@@ -2,29 +2,27 @@
     Layout = null;
 }
 
-<h3>Merhaba Admin</h3>
-
 <!doctype html>
 <html lang="en" class="semi-dark">
 
-@await Component.InvokeAsync("_AdminLayoutHeadComponentPartial");
+ @await Component.InvokeAsync("_AdminLayoutHeadComponentPartial")
 <body>
     <div class="wrapper">
-        @await Component.InvokeAsync("_AdminLayoutNavbarComponentPartial");
+   @await Component.InvokeAsync("_AdminLayoutNavbarComponentPartial")
 
-        @await Component.InvokeAsync("_AdminLayoutSidebarComponentPartial");
+         @await Component.InvokeAsync("_AdminLayoutSidebarComponentPartial")
 
         <main class="page-content">
 
-            @await Component.InvokeAsync("_AdminLayoutBreadcrumbComponentPartial");
+            @await Component.InvokeAsync("_AdminLayoutBreadcrumbComponentPartial")
 
             @RenderBody()
         </main>
 
-        @await Component.InvokeAsync("_AdminLayoutSwitcherComponentPartial");
+        @await Component.InvokeAsync("_AdminLayoutSwitcherComponentPartial")
     </div>
 
-    @await Component.InvokeAsync("_AdminLayoutScriptComponentPartial");
+    @await Component.InvokeAsync("_AdminLayoutScriptComponentPartial")
 
 </body>
 

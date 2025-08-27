@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Requirements\" />
     <Folder Include="wwwroot\snacked\ltr\assets\plugins\nicescroll\css\" />
     <Folder Include="wwwroot\snacked\rtl\assets\plugins\nicescroll\css\" />
   </ItemGroup>
