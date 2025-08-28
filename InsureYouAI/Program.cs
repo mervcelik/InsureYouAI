@@ -2,6 +2,8 @@ using InsureYouAI.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddUserSecrets<Program>();
+
 builder.Services.AddDbContext<InsureContext>();
 
 // Add services to the container.
