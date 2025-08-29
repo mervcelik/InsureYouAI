@@ -1,16 +1,17 @@
 ﻿using InsureYouAI.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace InsureYouAI.Context;
 
-public class InsureContext : DbContext
+public class InsureContext : IdentityDbContext<AppUser>
 {
     override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;initial Catalog=InsureDb;integrated Security=True; trust server certificate = true");
     }
-   
-    public DbSet<About>  Abouts { get; set; }
+
+    public DbSet<About> Abouts { get; set; }
     public DbSet<AboutItem> AboutItems { get; set; }
     public DbSet<Article> Articles { get; set; }
     public DbSet<Category> Categories { get; set; }
@@ -21,4 +22,5 @@ public class InsureContext : DbContext
     public DbSet<Slider> Sliders { get; set; }
     public DbSet<Testimonial> Testimonials { get; set; }
     public DbSet<TrailerVideo> TrailerVideos { get; set; }
+    public DbSet<Comment> Comments { get; set; }
 }
