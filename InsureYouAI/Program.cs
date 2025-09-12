@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
 builder.Configuration.AddUserSecrets<Program>();
 
 builder.Services.AddDbContext<InsureContext>();

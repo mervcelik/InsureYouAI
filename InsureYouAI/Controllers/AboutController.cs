@@ -8,7 +8,7 @@ namespace InsureYouAI.Controllers;
 public class AboutController : Controller
 {
     private readonly InsureContext _context;
-    public IConfiguration _configuration { get; set; }
+    private readonly IConfiguration _configuration;
     public AboutController(InsureContext context, IConfiguration configuration)
     {
         _context = context;
