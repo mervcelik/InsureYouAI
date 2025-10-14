@@ -15,7 +15,7 @@ public class _DefaultLast3ArticleComponentPartial:ViewComponent
 
     public IViewComponentResult Invoke()
     {
-        var values = _context.Articles.OrderByDescending(x => x.ArticleId).Take(3).Include(x=>x.Category).ToList();
+        var values = _context.Articles.OrderByDescending(x => x.ArticleId).Take(3).Include(x=>x.Category).Include(x=>x.AppUser).ToList();
         return View(values);
     }
 }

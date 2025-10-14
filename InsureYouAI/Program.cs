@@ -1,11 +1,19 @@
 using InsureYouAI.Context;
 using InsureYouAI.Entities;
+using InsureYouAI.Models;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient();
 builder.Configuration.AddUserSecrets<Program>();
+
+builder.Services.AddSignalR();
+
+builder.Services.AddHttpClient("openai", c =>
+{
+    c.BaseAddress = new Uri("https://api.openai.com/");
+});
 
 builder.Services.AddDbContext<InsureContext>();
 
@@ -19,6 +27,8 @@ builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
+
+app.MapHub<ChatHub>("/chathub");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
