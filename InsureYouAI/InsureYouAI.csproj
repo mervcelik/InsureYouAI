@@ -9,11 +9,13 @@
 
   <ItemGroup>
     <Folder Include="Requirements\" />
+    <Folder Include="Views\Shared\Components\_DashboardWidgetsComponentPartial\" />
     <Folder Include="wwwroot\snacked\ltr\assets\plugins\nicescroll\css\" />
     <Folder Include="wwwroot\snacked\rtl\assets\plugins\nicescroll\css\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.14.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
