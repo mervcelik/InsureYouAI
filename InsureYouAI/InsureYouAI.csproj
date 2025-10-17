@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Requirements\" />
-    <Folder Include="Views\Shared\Components\_DashboardWidgetsComponentPartial\" />
     <Folder Include="wwwroot\snacked\ltr\assets\plugins\nicescroll\css\" />
     <Folder Include="wwwroot\snacked\rtl\assets\plugins\nicescroll\css\" />
   </ItemGroup>
@@ -28,6 +27,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.8" />
+    <PackageReference Include="Microsoft.ML" Version="4.0.2" />
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="4.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
   </ItemGroup>
 
